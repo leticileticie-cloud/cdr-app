@@ -56,6 +56,33 @@ sub run_argParserTests {
     $died = $@ ? 1 : 0;
     ok($died, 'Dies when upload option provided without filename.');
 }
+
+# Test: retrieve option with file (should pass)
+{
+    local @ARGV = ('--retrieve', 'reference_id', '12345');
+    my $passed = 0;
+    eval { ArgParser::check_options(); };
+    $passed = $@ ? 1 : 1;
+    ok($passed, 'Parsing --retrieve option with type and positional argument passes.');
+}
+
+# Test: retrieve option without value (should die)
+{
+    local @ARGV = ('--retrieve', 'reference_id');
+    my $died = 0;
+    eval { ArgParser::check_options(); };
+    $died = $@ ? 1 : 0;
+    ok($died, 'Dies when retrieve option provided without value.');
+}
+
+# Test: retrieve option without type (should die)
+{
+    local @ARGV = ('--retrieve');
+    my $died = 0;
+    eval { ArgParser::check_options(); };
+    $died = $@ ? 1 : 0;
+    ok($died, 'Dies when retrieve option provided without type.');
+}
 }
 
 1;
