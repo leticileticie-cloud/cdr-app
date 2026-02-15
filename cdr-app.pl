@@ -5,6 +5,7 @@ use warnings;
 use lib 'lib';
 use ArgParser;
 use Uploader;
+use Reader;
 
 # Calls the option parser to check command-line arguments.
 if (ArgParser::check_options()) {
@@ -15,6 +16,14 @@ if (ArgParser::check_options()) {
         print "Uploading file to database was successful.\n";
         exit(1);
     } 
+
+    # retrieve option was selected with one positional argument needed
+    my $type = ArgParser::get_retrieve();
+    my $value = ArgParser::get_firstPositional();
+    if ($type && $value) {
+        Reader::retrieve($type, $value); 
+        exit(1);
+    }
 }
 else {
     die;
