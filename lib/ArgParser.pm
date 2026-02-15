@@ -35,4 +35,8 @@ sub check_options {
     return 1;
 }
 
+sub get_upload {
+    return $upload;
+}
+
 1;
