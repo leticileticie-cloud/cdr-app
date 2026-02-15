@@ -21,7 +21,8 @@ if (ArgParser::check_options()) {
     my $type = ArgParser::get_retrieve();
     my $value = ArgParser::get_firstPositional();
     if ($type && $value) {
-        Reader::retrieve($type, $value); 
+        my $optional = ArgParser::get_optPositional();
+        Reader::retrieve($type, $value, $optional); 
         exit(1);
     }
 }

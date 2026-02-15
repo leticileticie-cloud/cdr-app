@@ -17,7 +17,10 @@ sub usage {
     Options:
     -h, --help              Show this help and exit.
     -u, --upload FILE       Upload .csv file from given path.
-    -r, --retrieve TYPE     Retrieve entries of given type (reference_id).
+    -r, --retrieve TYPE     Retrieve entries of given type (reference_id, caller_id).
+                            Requires one positional argument for value.
+                            For caller_id requires at least onemore positional argument for date 
+                            or date range.
 
     Any remaining arguments after options are treated as positional arguments.
 USAGE
@@ -49,10 +52,20 @@ sub get_retrieve {
 sub get_firstPositional {
     my $value = $ARGV[0];
     if (!$value) {
-        die "One positional argument is needed for selected option.\n";
+        die "Positional arguments are needed for selected option.\n";
     }
 
     return $value;
+}
+
+sub get_optPositional {
+    if(scalar @ARGV < 2) {
+        return [];
+    }
+    else {
+        my $ref = [@ARGV[1..$#ARGV]];
+        return $ref;
+    }
 }
 
 1;

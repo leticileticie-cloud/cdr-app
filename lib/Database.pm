@@ -70,7 +70,7 @@ sub print_results {
     $sth->execute(@params) or die "Failed to execute query: $DBI::errstr";
     my @result;
     while (my $row = $sth->fetchrow_arrayref()) {
-        push @result, $row;
+        push @result, [@$row];
     }
     if (!@result) {
         print "No match found.\n";
