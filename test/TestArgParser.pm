@@ -3,7 +3,7 @@ package TestArgParser;
 
 use strict;
 use warnings;
-use Test::More tests => 6;
+use Test::More;
 use Test::Output;
 
 use lib 'lib';
@@ -56,7 +56,6 @@ sub run_argParserTests {
     $died = $@ ? 1 : 0;
     ok($died, 'Dies when upload option provided without filename.');
 }
-done_testing();
 }
 
 1;
