@@ -1,0 +1,74 @@
+*   commit 7df85193e838c27a8b3c54e008578a7a6b12e115
+|\  Merge: 87bfdba 2b229d0
+| | Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| | Date:   Mon Feb 16 09:53:25 2026 +0100
+| | 
+| |     Merge branch 'queries'
+| |     Merging branch 'queries' into master.
+| | 
+| * commit 2b229d0594c05d64be4ea328dd5568b624aae938
+| | Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| | Date:   Mon Feb 16 09:52:34 2026 +0100
+| | 
+| |     Failing test in TestArgParser.pm corrected.
+| | 
+* | commit 87bfdbac9ec6465cce005507b2c9d85193de3074
+|/  Author: Vlasta Podesvova <letici.leticie@gmail.com>
+|   Date:   Mon Feb 16 09:05:17 2026 +0100
+|   
+|       README created.
+| 
+* commit a985cac448806e5dfa251affa5886a2b1a1824da
+| Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| Date:   Mon Feb 16 00:45:13 2026 +0100
+| 
+|     Logic to retrieve entries matching caller_id in a given timeframe has been implemented.
+| 
+* commit 7365a4f60b9cd00055bdb5848cf0408a90432299
+| Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| Date:   Mon Feb 16 00:23:42 2026 +0100
+| 
+|     Test files for database upload and retrieval functionality have been added.
+| 
+* commit c4cc6e83da576e66b5c5b8e9f596203b81fe9d0a
+| Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| Date:   Mon Feb 16 00:04:16 2026 +0100
+| 
+|     Database module added for handling database interactions.
+|     Reader module added for reading entries from the database.
+| 
+* commit bb53026699c11d524be5f5699c8f5fe18670f720
+| Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| Date:   Sun Feb 15 23:36:01 2026 +0100
+| 
+|     .gitignore cahnged
+| 
+* commit 7d28d8c0227791a3bbf26e83443ea98a7428a78f
+| Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| Date:   Sun Feb 15 23:32:13 2026 +0100
+| 
+|     Tests for Uploader.pm implemented.
+| 
+* commit b7965b9743feb1cc163af2f014bf64929f4a47ac
+| Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| Date:   Sun Feb 15 23:20:47 2026 +0100
+| 
+|     Uploading .csv file content to db implemented.
+| 
+* commit c0f8626e56e112ecf831864ef974a9486c942a31
+| Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| Date:   Sun Feb 15 22:59:42 2026 +0100
+| 
+|     Addded tests for ArgParser.
+| 
+* commit c614537aba1faac6b46325ce2c0b9aa5abc8ccce
+| Author: Vlasta Podesvova <letici.leticie@gmail.com>
+| Date:   Sun Feb 15 22:25:59 2026 +0100
+| 
+|     Argument parser implemented.
+| 
+* commit 4afd2ee0af55c3c0dd25acacaabaec2cc5232b01
+  Author: Vlasta Podesvova <letici.leticie@gmail.com>
+  Date:   Sun Feb 15 21:54:41 2026 +0100
+  
+      Initial structure of the project
