@@ -19,7 +19,7 @@ sub usage {
     -u, --upload FILE       Upload .csv file from given path.
     -r, --retrieve TYPE     Retrieve entries of given type (reference_id, caller_id).
                             Requires one positional argument for value.
-                            For caller_id requires at least onemore positional argument for date 
+                            For caller_id requires at least one more positional argument for date 
                             or date range.
 
     Any remaining arguments after options are treated as positional arguments.
