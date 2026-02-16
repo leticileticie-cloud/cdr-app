@@ -70,9 +70,12 @@ sub run_argParserTests {
 {
     local @ARGV = ('--retrieve', 'reference_id');
     my $died = 0;
-    eval { ArgParser::check_options(); };
+    eval {
+        ArgParser::check_options();
+        ArgParser::get_firstPositional();
+    };
     $died = $@ ? 1 : 0;
-    ok($died, 'Dies when retrieve option provided without value.');
+    ok($died, 'Dies when retrieve option provided without value (no positional argument).');
 }
 
 # Test: retrieve option without type (should die)
